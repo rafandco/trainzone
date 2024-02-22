@@ -1,0 +1,40 @@
+---
+import WorkIcon from "./icons/WorkIcon.astro"
+---
+<a href="tel:671597133" id="telefono-link">
+  <WorkIcon />
+  <p class="label">Trabaja con nosotros</p>
+</a>
+<style>
+  a {
+      display: flex;
+  align-items: center;
+  box-sizing: border-box;
+    cursor: pointer;
+  border: 0;
+  padding: 0.75rem 1rem;
+  background-color: var(--accent-blue);
+  border-radius: 32px;
+  height: 3rem;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.5rem;
+  color: white
+  }
+  a:hover{
+    background-color: var( --accent-blue-dark);  
+  }
+  p {
+      margin: 0;
+  position: relative;
+  font-size: 1.13rem;
+  letter-spacing: 0.02em;
+  color: white;
+  text-align: center;
+  }
+  @media screen and (max-width: 420px) {
+  .a {
+    width: auto;
+    align-self: unset;
+  }
+</style>

@@ -1,0 +1,95 @@
+---
+import Socials from "./Socials.astro"
+import HeroNav from "./HeroNav.astro"
+import WorkWithUsBtn from "./WorkWithUsBtn.astro"
+---
+
+<section>
+  <div>
+    <img class="image-icon" alt="logo trainzone" src="./public/logo.avif" />
+    <p class="slogan">
+      <span class="gradient-text">TrainZone</span>
+      <span>es tu centro de entrenamiento personal</span>
+    </p>
+    <h1>TrainZone: Entrenamiento Personal en Bollullos Par del Condado y La Palma del Condado en Huelva
+    </h1>
+    <Socials />
+    <HeroNav />
+    <WorkWithUsBtn />
+  </div>
+  
+</section>
+<style>
+  section{
+  display: flex;
+  align-items: center;
+  box-sizing: border-box; 
+    overflow: hidden;
+  flex-direction: column; 
+    align-self: stretch;
+  min-height: 982px;
+  height: auto;
+  flex-shrink: 0;
+  justify-content: flex-start;
+  padding: 0 1rem;
+  background-image: url(./public/section--sectionhero@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  text-align: center;
+  color: var(--color-whitesmoke-100);
+  font-family: var(--font-inter);
+  }
+  div {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    flex-direction: column;
+    width: 100%;
+    flex: 1;
+    justify-content: center;
+    padding: 2rem 0;
+    gap: 2rem;
+    max-width: 71.25rem;
+  }
+  h1 {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.60);
+  }
+  img{
+      position: relative;
+  width: 16.56rem;
+  height: 8.22rem;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+  }
+  .slogan {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    font-size: 4rem;
+    line-height: 125%;
+    font-weight: 700;
+    display: inline-block;
+    max-width: 60rem;
+    color: white;
+  }
+  .gradient-text {
+    
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+  @media screen and (max-width: 960px) {
+  .slogan {
+    font-size: 3rem;
+  }
+  @media screen and (max-width: 420px) {
+  .slogan {
+    font-size: 2rem;
+  }
+</style>

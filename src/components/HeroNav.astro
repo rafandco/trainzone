@@ -1,0 +1,139 @@
+---
+import ServicesIcon from "./icons/ServicesIcon.astro"
+import ContactIcon from "./icons/ContactIcon.astro"
+import TeamIcon from "./icons/TeamIcon.astro"
+import ReviewsIcon from "./icons/ReviewsIcon.astro"
+---
+
+<nav>
+  <a href="#servicios" class="nav-links" id="servicios-nav-link">
+    <div class="nav-link-icon">
+      <ServicesIcon />
+    </div>
+    <div class="nav-link-info">
+      <p class="nav-link-title">Servicios</p>
+      <p class="text">Entrenamiento, nutrición y psicología</p>
+    </div>
+  </a>
+  <a href="#equipo" class="nav-links" id="equipo-nav-link">
+    <div class="nav-link-icon">
+      <TeamIcon />
+    </div>
+    <div class="nav-link-info">
+      <p class="nav-link-title">Equipo</p>
+      <p class="text">Conoce a nuestros profesionales</p>
+    </div>
+  </a>
+  <a href="#reseñas" class="nav-links" id="reseñas-nav-link">
+    <div class="nav-link-icon">
+      <ReviewsIcon />
+    </div>
+    <div class="nav-link-info">
+      <p class="nav-link-title">Reseñas</p>
+      <p class="text">Lee las reseñas de nuestros usuarios</p>
+    </div>
+  </a>
+  <a href="#conocenos" class="nav-links" id="conocenos-nav-link">
+    <div class="nav-link-icon">
+      <ContactIcon />
+    </div>
+    <div class="nav-link-info">
+      <p class="nav-link-title">Conócenos</p>
+      <p class="text">Llámanos o envíanos un correo electrónico</p>
+    </div>
+  </a>
+</nav>
+<style>
+  nav {
+    overflow: hidden;
+    display: flex;
+    gap: 1rem;
+    align-self: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+  }
+  a {
+    overflow: hidden;
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+    border: 0;
+    padding: 1rem;
+    background-color: var(--accent-teal-light);
+    flex: 1;
+    border-radius: 16px;
+    height: 11.13rem;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    min-width: 10.5rem;
+    max-width: 11.13rem;
+    color: white;
+  }
+  a:hover {
+    background-color: var(--accent-teal);
+  }
+  img {
+    overflow: hidden;
+    flex-shrink: 0;
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    object-fit: cover;
+  }
+  p {
+    align-self: stretch;
+    margin: 0;
+    position: relative;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: #efefef;
+    text-align: left;
+  }
+  .nav-link-icon {
+    overflow: hidden;
+    flex-shrink: 0;
+    border-radius: 60px;
+    background-color: var(--accent-teal-dark);
+    width: 3.75rem;
+    height: 3.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-link-info {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.5rem;
+  }
+  .nav-link-title {
+    margin: 0;
+    position: relative;
+    font-size: 1.5rem;
+    line-height: 125%;
+    font-weight: 700;
+    color: white;
+    text-align: left;
+    align-self: stretch;
+  }
+  @media screen and (max-width: 420px) {
+    .nav-links {
+      height: auto;
+      min-width: 7.5rem;
+    }
+    .nav-links:hover {
+      background-color: var(--color-teal-100);
+    }
+    .text {
+      display: none;
+    }
+  }
+</style>
