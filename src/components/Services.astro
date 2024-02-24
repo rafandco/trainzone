@@ -1,0 +1,79 @@
+---
+import ServicesCard from "./ServicesCard.astro"
+---
+
+<section class="section" data-scroll-to="section" id="servicios">
+  <div class="div-container">
+    <h2 class="h24">Servicios</h2>
+    <div class="servicios-wrapper">
+      <ServicesCard
+        title="Entrenamiento individual y grupal"
+        imgSrc="/barbell.svg"
+      >
+        Ofrecemos servicios de entrenamiento personal individual, por parejas y
+        entrenamientos grupales funcionales.
+      </ServicesCard>
+      <ServicesCard
+        title="Programas de nutrición personalizados"
+        imgSrc="/carrot.svg"
+      >
+        Centrados en la educación nutricional. Tratamos TCA, tu relación con la
+        comida y tratamiento de patologías.
+      </ServicesCard>
+      <ServicesCard title="Apoyo psicológico" imgSrc="/mood-happy.svg">
+        Te brindamos de las herramientas necesarias para optimizar tu estado
+        mental y alcanzar tus metas.
+      </ServicesCard>
+    </div>
+  </div>
+</section>
+<style>
+  section {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    background-color: #f4f6f5;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 1rem;
+    text-align: left;
+    color: black;
+  }
+  .div-container {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 4rem 0;
+    box-sizing: border-box;
+    gap: 2rem;
+    max-width: 71.25rem;
+  }
+  h2 {
+    margin: 0;
+    position: relative;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    font-weight: 700;
+  }
+  .servicios-wrapper {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    gap: 2rem;
+  }
+  @media screen and (max-width: 420px) {
+    .servicios-wrapper {
+      flex-direction: row;
+      gap: 1rem;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+</style>
