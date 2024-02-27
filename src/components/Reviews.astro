@@ -1,0 +1,96 @@
+---
+import ReviewCard from "./ReviewCard.astro"
+---
+
+<section class="section2">
+  <div class="div-container" data-scroll-to="divContainer1" id="reseñas">
+    <h2>Reseñas de Nuestros Clientes</h2>
+    <div class="reviews-wrapper">
+      <ReviewCard author="Yolanda Orta">
+        No me gustan los gimnasios, quería algo parecido y es lo más similar que
+        he encontrado e incluso mejor, me encanta estos ratitos de la semana y
+        sobre todo para desconectar. Sobretodo el personal es magnífico y están
+        muy atentos a la técnica a la hora de hacer los ejercicios. Lo
+        recomiendo mucho!!!
+      </ReviewCard>
+      <ReviewCard author="Rosa Valdayo">
+        Mi experiencia en el centro es fenomenal. Salgo súper activa y sudada
+        tela jajjaj. El trato es fantástico por parte del personal del centro.
+        Lo recomiendo a todos, cambiará vuestro estado de ánimo, allí te olvidas
+        de todo!!! Animaros
+      </ReviewCard>
+
+      <ReviewCard author="David Domínguez">
+        Gran centro! Personal muy profesional y pendiente siempre para corregir
+        y mejorar. Recomendado al 100% sobre todo si como yo, estás
+        recuperándote de una lesión y quieres volver a la práctica deportiva.
+      </ReviewCard>
+      <ReviewCard author="Estefanía Fernández">
+        ¡¡Inmejorable!! Cada día más contenta. Trabajar toda la musculatura,
+        desconectar y compartir con gente espectacular es todo un privilegio.
+        Muchas gracias por todo!!!
+      </ReviewCard>
+      <ReviewCard author="Daniel Martinez">
+        Instalaciones de primera calidad y personal cualificado, profesional y
+        cercano. El ambiente de comunidad hace que te diviertas a la vez que
+        entrenas.
+      </ReviewCard>
+      <ReviewCard author="Menchu Nieto">
+        Espectacular, un trato exquisito Siempre atendiendo a sus clientes para
+        evitar lesiones, muy divertido y ameno!!!
+      </ReviewCard>
+    </div>
+  </div>
+</section>
+<style>
+  section {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    background-color: #e0e0e0;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 1rem;
+    text-align: left;
+    font-size: 1.5rem;
+    color: black;
+  }
+  .div-container {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 4rem 0;
+    box-sizing: border-box;
+    gap: 2rem;
+    max-width: 71.25rem;
+  }
+  h2 {
+    margin: 0;
+    position: relative;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    font-weight: 700;
+  }
+  .reviews-wrapper {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  @media screen and (max-width: 420px) {
+    .reviews-wrapper {
+      flex-direction: row;
+      gap: 1rem;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+</style>

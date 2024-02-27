@@ -1,0 +1,86 @@
+---
+import StarFilled from "./icons/StarFilled.astro"
+
+interface Props {
+  author: string
+}
+const { author } = Astro.props
+---
+
+<article class="article-opinion">
+  <div class="div-review">
+    <header>
+      <h3>{author}</h3>
+      <div class="div-stars">
+        <StarFilled />
+        <StarFilled />
+        <StarFilled />
+        <StarFilled />
+        <StarFilled />
+      </div>
+    </header>
+    <p class="p7">
+      <slot />
+    </p>
+  </div>
+</article>
+<style>
+  article {
+    flex: 1;
+    border-radius: 16px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: stretch;
+    min-width: 17.19rem;
+    font-size: 1rem;
+    color: #2e2e2e;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .div-review {
+    height: 100%;
+    align-self: stretch;
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+  header {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    color: black;
+    gap: 0.5rem;
+  }
+  h3 {
+    margin: 0;
+    flex: 1;
+    position: relative;
+    line-height: 2rem;
+    font-size: 1.13rem;
+    font-weight: 600;
+  }
+  .div-stars {
+    align-self: stretch;
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.125rem;
+  }
+  p {
+    align-self: stretch;
+    margin: 0;
+    position: relative;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+</style>
