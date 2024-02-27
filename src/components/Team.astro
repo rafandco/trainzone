@@ -1,0 +1,70 @@
+---
+import TeamMember from "./TeamMember.astro"
+---
+
+<section>
+  <div class="div-container" data-scroll-to="divContainer2" id="equipo">
+    <h2>Conoce a nuestro equipo</h2>
+    <div class="team-wrapper">
+      <TeamMember
+        name="Javier Garrote"
+        role="CEO Principal y entrenador personal"
+        imgSrc="public/javier.avif"
+      />
+      <TeamMember
+        name="Daniel Gallego Nieto"
+        role="Entrenador personal"
+        imgSrc="public/daniel.avif"
+      />
+      <TeamMember
+        name="María Luisa Pérez"
+        role="Nutricionista"
+        imgSrc="public/marisa.avif"
+      />
+    </div>
+  </div>
+</section>
+<style>
+  section {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    background-color: #e9eceb;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 1rem;
+    text-align: left;
+    color: black;
+  }
+
+  .div-container {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+
+    justify-content: center;
+    padding: 3.88rem 0;
+    box-sizing: border-box;
+    gap: 2rem;
+    max-width: 71.25rem;
+  }
+  .team-wrapper {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    gap: 2rem;
+  }
+  h2 {
+    margin: 0;
+    position: relative;
+    line-height: 3rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+</style>
