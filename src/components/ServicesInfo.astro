@@ -1,0 +1,58 @@
+---
+import ServicesInfoCard from "./ServicesInfoCard.astro"
+---
+
+<section class="section6">
+  <div class="container">
+    <ServicesInfoCard title="Entrenamiento" imgSrc="/training.avif">
+      Somos tu centro deportivo completo para transformar tu vida. Te ofrecemos
+      entrenamiento personalizado y en pareja, así como emocionantes sesiones de
+      entrenamiento funcional en grupo. Nuestros entrenadores altamente
+      capacitados diseñarán un plan de ejercicio personalizado para ayudarte a
+      alcanzar tus objetivos de fitness de manera efectiva.
+    </ServicesInfoCard>
+    <ServicesInfoCard title="Nutrición" imgSrc="/nutrition.avif">
+      Sabemos que la nutrición desempeña un papel fundamental en el rendimiento
+      deportivo, la pérdida de peso, el desarrollo muscular y, en general, en la
+      calidad de vida de las personas. Por lo tanto, ofrecemos programas de
+      asesoramiento nutricional personalizados para cada cliente. Si estás
+      buscando mejorar tu alimentación, alcanzar tus objetivos de fitness o
+      enfrentar trastornos de la conducta alimentaria, estamos aquí para
+      ayudarte.
+    </ServicesInfoCard>
+    <ServicesInfoCard title="Psicología" imgSrc="/psicology.avif">
+      No nos olvidamos de tu bienestar mental. En TrainZone, comprendemos que la
+      salud mental es igual de importante que la física. Es por eso que
+      ofrecemos apoyo psicológico para ayudarte a mantener el equilibrio mental
+      necesario para alcanzar tus metas de manera sostenible. El apoyo
+      psicológico en TrainZone no se limita solo al gimnasio. Estamos aquí para
+      ayudarte a lidiar con los desafíos de la vida diaria, a mantener una
+      actitud positiva y a encontrar el equilibrio entre cuerpo y mente.
+    </ServicesInfoCard>
+  </div>
+</section>
+
+<style>
+  section {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    background-color: #f0f2f1;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 1rem;
+  }
+  div {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2rem 0;
+    box-sizing: border-box;
+    gap: 2rem;
+    max-width: 71.25rem;
+  }
+</style>

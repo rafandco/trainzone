@@ -1,0 +1,101 @@
+---
+interface Props {
+  title: string
+  imgSrc: string
+}
+const { title, imgSrc } = Astro.props
+---
+
+<article>
+  <img alt="" src={imgSrc} />
+
+  <div>
+    <h2>{title}</h2>
+    <p>
+      <slot />
+    </p>
+  </div>
+</article>
+
+<style>
+  article {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    align-self: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: left;
+    font-size: 1.25rem;
+    color: #2e2e2e;
+  }
+  img {
+    position: relative;
+    border-radius: 16px;
+    width: 28.13rem;
+    height: 35.63rem;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  div {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    flex: 1;
+    border-radius: 16px;
+    background-color: white;
+    height: 35.63rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2rem;
+    box-sizing: border-box;
+    min-width: 22.81rem;
+  }
+  h2 {
+    margin: 0;
+    align-self: stretch;
+    position: relative;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    font-weight: 700;
+    color: black;
+  }
+  p {
+    margin: 0;
+    align-self: stretch;
+    position: relative;
+    line-height: 1.75rem;
+  }
+  @media screen and (max-width: 1200px) {
+  img {
+    display: flex;
+  }
+
+  @media screen and (max-width: 960px) {
+    img {
+      flex: 1;
+      min-width: 24.25rem;
+    }
+    div {
+      min-width: 18.75rem;
+    }
+  }
+  @media screen and (max-width: 420px) {
+    img {
+      flex: 1;
+      min-width: 18rem;
+      max-height: 20rem;
+    }
+
+    div {
+      flex: 1;
+      height: auto;
+    }
+    p {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+  }
+</style>
