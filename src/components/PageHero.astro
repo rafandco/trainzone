@@ -1,9 +1,17 @@
+---
+interface Props {
+  title: string
+  text: string
+}
+const { title, text } = Astro.props
+---
+
 <section>
   <div>
     <img alt="" src="/logo.avif" />
 
-    <h1>Servicios</h1>
-    <p class="p18">Lee toda la información sobre nuestros servicios.</p>
+    <h1>{title}</h1>
+    <p class="p18">{text}</p>
   </div>
 </section>
 <style>

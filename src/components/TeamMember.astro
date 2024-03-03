@@ -8,7 +8,7 @@ interface Props {
 const { name, role, imgSrc } = Astro.props
 ---
 
-<article id="articleTrabajador">
+<a id="articleTrabajador" href="/team">
   <img alt="" src={imgSrc} />
 
   <div>
@@ -18,9 +18,9 @@ const { name, role, imgSrc } = Astro.props
     </header>
     <p>{role}</p>
   </div>
-</article>
+</a>
 <style>
-  article {
+  a {
     display: flex;
     flex-direction: column;
     justify-content: center;

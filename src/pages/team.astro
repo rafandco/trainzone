@@ -1,1 +1,16 @@
-<h1>Equipo</h1>
+---
+import ContactUs from "../components/ContactUs.astro"
+import Footer from "../components/Footer.astro"
+import PageHero from "../components/PageHero.astro"
+import TeamInfo from "../components/TeamInfo.astro"
+import Layout from "../layouts/Layout.astro"
+---
+
+<Layout title="Servicios">
+  <div class="pc-servicios">
+    <PageHero title="Equipo" text="Conoce nuestro equipo de profesionales" />
+    <TeamInfo />
+    <ContactUs />
+    <Footer />
+  </div>
+</Layout>
