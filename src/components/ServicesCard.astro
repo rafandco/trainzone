@@ -6,12 +6,12 @@ interface Props {
 const { title, imgSrc } = Astro.props
 ---
 
-<a id="articleServicio" href="/services">
+<a href="/services">
   <div>
-    <img alt="" src={imgSrc} />
+    <img alt="icono del servicio" src={imgSrc} />
   </div>
   <h3>{title}</h3>
-  <p class="p4">
+  <p>
     <slot />
   </p>
 </a>
