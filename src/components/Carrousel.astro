@@ -1,0 +1,65 @@
+---
+interface Props {
+    imgsSrc: string[]
+}
+
+const { imgsSrc } = Astro.props
+---
+
+<ul class="list">
+  { imgsSrc.map( (imgSrc) => <li class="item"><img class="content" alt="" src={imgSrc} /></li> )
+  } 
+
+</ul>
+
+<style>
+.list {
+  display: flex;
+  gap: 8px;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  list-style: none;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+
+  /* Scrollbar para Firefox */
+  scrollbar-width: thin; /* Establece un scrollbar más delgado */
+  scrollbar-color: rgba(0, 0, 0, 0.5) transparent; /* Color del scrollbar y del fondo */
+}
+
+/* Estilos del scrollbar para WebKit (Chrome, Safari) */
+.list::-webkit-scrollbar {
+  height: 8px; /* Ancho de la barra de scroll */
+  padding: 4px; /* Padding de la barra de scroll */
+}
+
+.list::-webkit-scrollbar-track {
+  background: transparent; /* Fondo transparente */
+}
+
+.list::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5); /* Color oscuro semitransparente */
+  border-radius: 4px; /* Esquinas redondeadas */
+}
+
+.item {
+  flex-shrink: 0;
+  width: auto;
+  height: 60vh;
+  background-color: #FFF;
+  border-radius: 16px;
+  scroll-snap-align: center;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-family: sans-serif;
+  font-size: 64px;
+  font-weight: bold;
+    border-radius: 16px;
+}
+</style>
