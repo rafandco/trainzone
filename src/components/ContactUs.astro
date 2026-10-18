@@ -14,10 +14,18 @@ import EmailButton from "./EmailButton.astro"
           <span class="p-txt">
             <span class="span-text">TLF: 671597133</span>
             <span class="span-text">E-mail: centrotrainzone@gmail.com</span>
-            <span class="span-text">Calle Fernando Escartín, Nº 12.</span>
-            <span class="span-text">Bollullos Par Del Condado, HUELVA.</span>
           </span>
         </p>
+        <div class="addresses">
+          <p class="address">
+            <span class="span-text"><strong>Bollullos Par del Condado</strong></span>
+            <span class="span-text">Calle Fernando Escartín, Nº 12. Huelva.</span>
+          </p>
+          <p class="address">
+            <span class="span-text"><strong>Espartinas</strong></span>
+            <span class="span-text">C. Padre Claudio López, Nº 16. Sevilla.</span>
+          </p>
+        </div>
         <div class="div-parent">
           <div class="div-button-wrapper">
             <PhoneButton />
@@ -27,13 +35,28 @@ import EmailButton from "./EmailButton.astro"
           <Socials />
         </div>
       </article>
-      <iframe
-        title="Mapa"
-        class="div-mapa"
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12688.132882684664!2d-6.5328454!3d37.3417222!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd11f1088700e8fd%3A0x3a93db66def6f945!2sTRAINZONE!5e0!3m2!1ses!2ses!4v1694453591308!5m2!1ses!2ses"
-        loading="lazy"
-      >
-      </iframe>
+      <div class="map-tabs">
+        <input type="radio" name="centro" id="mapa-bollullos" checked />
+        <input type="radio" name="centro" id="mapa-espartinas" />
+        <div class="tab-buttons">
+          <label for="mapa-bollullos">Bollullos (Huelva)</label>
+          <label for="mapa-espartinas">Espartinas (Sevilla)</label>
+        </div>
+        <iframe
+          title="Mapa TrainZone Bollullos Par del Condado"
+          class="map map-bollullos"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12688.132882684664!2d-6.5328454!3d37.3417222!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd11f1088700e8fd%3A0x3a93db66def6f945!2sTRAINZONE!5e0!3m2!1ses!2ses!4v1694453591308!5m2!1ses!2ses"
+          loading="lazy"
+        >
+        </iframe>
+        <iframe
+          title="Mapa TrainZone Espartinas"
+          class="map map-espartinas"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12688.132882684664!2d-6.12245200302553!3d37.38069714554437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd12130005aa692f%3A0x31270aaa225e758c!2s%E2%96%B7%20Trainzone%20-%20Entrenamiento%20personal%20Espartinas!5e0!3m2!1ses!2ses!4v1792319301751!5m2!1ses!2ses"
+          loading="lazy"
+        >
+        </iframe>
+      </div>
     </div>
   </div>
 </section>
@@ -123,14 +146,67 @@ import EmailButton from "./EmailButton.astro"
     justify-content: stretch;
     gap: 1rem;
   }
+  .addresses {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .address {
+    flex-direction: column;
+    align-items: flex-start;
+    border-left: 3px solid var(--accent-teal-light);
+    padding-left: 0.75rem;
+    box-sizing: border-box;
+  }
+  .map-tabs {
+    flex: 1;
+    min-width: 15.63rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .map-tabs input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .tab-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  label {
+    padding: 0.6rem 1.1rem;
+    border-radius: 32px;
+    background-color: #595959;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+  }
+  label:hover {
+    background-color: #4f4f4f;
+  }
+  #mapa-bollullos:checked ~ .tab-buttons label[for="mapa-bollullos"],
+  #mapa-espartinas:checked ~ .tab-buttons label[for="mapa-espartinas"] {
+    background-color: var(--accent-teal-light);
+  }
+  #mapa-bollullos:focus-visible ~ .tab-buttons label[for="mapa-bollullos"],
+  #mapa-espartinas:focus-visible ~ .tab-buttons label[for="mapa-espartinas"] {
+    outline: 2px solid white;
+    outline-offset: 2px;
+  }
   iframe {
     border: 0;
-    flex: 1;
     position: relative;
     border-radius: 1rem;
-    height: 18.75rem;
+    height: 22rem;
+    width: 100%;
     overflow: hidden;
-    min-width: 15.63rem;
+    display: none;
+  }
+  #mapa-bollullos:checked ~ .map-bollullos,
+  #mapa-espartinas:checked ~ .map-espartinas {
+    display: block;
   }
   @media screen and (max-width: 805px) {
     .div-button-wrapper {
